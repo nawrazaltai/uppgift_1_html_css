@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "Manrope";
+  transition: all ease-in-out 500ms;
 }
 
 header {
@@ -38,6 +39,10 @@ header {
   margin: 0 2.5px;
 }
 
+.dark_mode_title {
+  display: none;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -64,6 +69,20 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(243, 240, 254, 1) 50%,
+    rgba(252, 245, 254, 1) 100%
+  );
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid red; */
+  align-items: end;
+  margin-top: 80px;
 }
 
 h1 {
@@ -83,6 +102,10 @@ h1 {
   font-weight: 400;
 }
 
+.hero_right_content {
+  display: none;
+}
+
 .cta_container {
   display: flex;
   flex-direction: column;
@@ -90,7 +113,6 @@ h1 {
   padding: 0 10px;
   align-items: center;
   gap: 16px;
-  /* border: 1px solid red; */
 }
 
 .ios_cta,
@@ -100,6 +122,9 @@ h1 {
   border: none;
   border-radius: 8px;
   width: 100%;
+  max-width: 366px;
+  /* width: 366px; */
+  margin: 0 25px;
   height: 50px;
   object-fit: contain;
   background-image: url("assets/appstore-light.svg.png");
@@ -113,15 +138,8 @@ h1 {
 
 .discover_more_container {
   display: flex;
+  flex-grow: 1;
   width: 100%;
-  /* margin-top: 34px; */
-  background-color: #f2f0fe;
-  background: linear-gradient(
-    90deg,
-    rgba(252, 245, 254, 1) 0%,
-    rgba(243, 240, 254, 1) 50%,
-    rgba(252, 245, 254, 1) 100%
-  );
   align-items: center;
   justify-content: center;
   gap: 22px;
@@ -141,6 +159,11 @@ h1 {
 
 .discover_more_text {
   color: #585c7b;
+}
+
+.brands_container {
+  height: 0;
+  width: 100%;
 }
 
 .features_container {
@@ -189,6 +212,7 @@ h1 {
 
 .feature_title_descripion_container {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   gap: 10px;
 }
@@ -214,6 +238,11 @@ h1 {
 
 .phone_img_container {
   margin: 32px;
+  width: 20rem;
+  height: 34rem;
+  background-position: center;
+  background-image: url("assets/how_it_works.png");
+  background-repeat: no-repeat;
 }
 
 .how_does_it_work_subtitle {
@@ -257,9 +286,9 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid #e2e5f1;
   padding: 12px 15px;
-  /* border: 1px solid gray; */
 }
 .accordion_header_container:last-child {
   border: none;
@@ -268,7 +297,9 @@ h1 {
 .accordion_title {
   font-size: 16px;
   font-weight: 600;
-  width: 85%;
+  flex-grow: 1;
+  max-width: 85%;
+  margin-right: 10px;
 }
 
 .accordion_circle_open,
@@ -308,7 +339,8 @@ h1 {
 
 .contat_us_now_container > p {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .subscrice_container {
@@ -333,7 +365,6 @@ h1 {
   color: #131022;
   font-weight: 900;
   font-size: 21px;
-  width: 70%;
 }
 
 .subscribe_lower_content {
@@ -377,4 +408,104 @@ footer p {
   color: #9397ad;
   text-align: center;
   margin: 25px 0 30px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .theme_content_container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 30px;
+    gap: 10px;
+  }
+
+  .dark_mode_title {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  h1 {
+    width: 60%;
+    font-size: 44px;
+  }
+
+  .hero_left_content {
+    /* align-items: start; */
+    /* justify-content: start; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero_description {
+    text-align: start;
+    margin: 1.2rem 0rem;
+  }
+
+  .hero_right_content {
+    display: flex;
+    padding: 0 1rem 0 0;
+    /* border: 1px solid red; */
+  }
+
+  .cta_container {
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .ios_cta,
+  .android_cta {
+    max-width: 200px;
+    margin: 0;
+    height: 43px;
+    background-size: 6rem;
+  }
+
+  .discover_more_container {
+    justify-content: start;
+    gap: 1.2rem;
+    padding: 2.25rem 1rem;
+  }
+
+  .brands_container {
+    height: 8rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    background-image: url("assets/Brands.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .features_list_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+  }
+
+  .features_description {
+    padding: 1rem 1.3rem;
+  }
+
+  .features_title,
+  .how_does_it_work_title,
+  .faq_title {
+    font-size: 33px;
+  }
+
+  .phone_img_container {
+    background-image: url("assets/how_it_works_2.png");
+    width: 100%;
+    margin: 0;
+  }
+
+  .how_does_it_work_subtitle {
+    font-size: 23px;
+  }
+
+  .how_does_it_work_description {
+    margin: 1rem 6.6rem;
+    /* align-self: center; */
+  }
 }
