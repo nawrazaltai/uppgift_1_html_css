@@ -177,56 +177,90 @@
           Still have unanswered questions and need to get in touch?
         </p>
 
-        <section class="accordion_container">
-          <article class="accordion_header_container">
-            <h4 class="accordion_title">
-              Is any of my personal information stored in the App?
-            </h4>
-            <div class="accordion_circle_open">
-              <img src="assets/arr_up.png" alt="Arrow up" />
+        <div class="accordion_header_container accordion_header_hidden">
+          <h4 class="accordion_title">
+            Is any of my personal information stored in the App?
+          </h4>
+          <div class="accordion_circle accordion_circle_closed">
+            <img src="assets/arr_down.png" alt="Arrow down" />
+          </div>
+        </div>
+
+        <section class="accordion_list_container">
+          <article class="accordion_container accordion_container_hidden">
+            <div class="accordion_header_container">
+              <h4 class="accordion_title">
+                Is any of my personal information stored in the App?
+              </h4>
+
+              <div class="accordion_circle accordion_circle_open">
+                <img src="assets/arr_up.png" alt="Arrow up" />
+              </div>
+            </div>
+
+            <div class="accordion_content accordion_content_hidden">
+              <p>
+                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper.
+                Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus
+                adipiscing gravida et consequat lobortis arcu velit. Nibh
+                pharetra fermentum duis accumsan lectus non. Massa cursus
+                molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus
+                gravida adipiscing euismod montes, duis egestas. Vehicula eu
+                etiam quam tristique tincidunt suspendisse ut consequat.
+                <br />
+                <br />
+                Ornare senectus fusce dignissim ut. Integer consequat in eu
+                tortor, faucibus et lacinia posuere. Turpis sit viverra lorem
+                suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam
+                nunc purus lacus, elit leo elit facilisi. Dignissim amet
+                adipiscing massa integer.
+              </p>
             </div>
           </article>
-
-          <div class="accordion_content">
-            <p>
-              Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper.
-              Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus
-              adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra
-              fermentum duis accumsan lectus non. Massa cursus molestie lorem
-              scelerisque pellentesque. Nisi, enim, arcu purus gravida
-              adipiscing euismod montes, duis egestas. Vehicula eu etiam quam
-              tristique tincidunt suspendisse ut consequat.
-              <br />
-              <br />
-              Ornare senectus fusce dignissim ut. Integer consequat in eu
-              tortor, faucibus et lacinia posuere. Turpis sit viverra lorem
-              suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam
-              nunc purus lacus, elit leo elit facilisi. Dignissim amet
-              adipiscing massa integer.
-            </p>
-          </div>
 
           <div class="accordion_header_container">
             <h4 class="accordion_title">
               What formats can I download my transaction history in?
             </h4>
-            <div class="accordion_circle_closed">
+            <div class="accordion_circle accordion_circle_closed">
               <img src="assets/arr_down.png" alt="Arrow down" />
             </div>
           </div>
 
-          <div class="accordion_header_container">
+          <div class="accordion_header_container accordion_tablet_3rd">
             <h4 class="accordion_title">Can I schedule future transfers?</h4>
-            <div class="accordion_circle_closed">
+            <div class="accordion_circle accordion_circle_closed">
               <img src="assets/arr_down.png" alt="Arrow down" />
             </div>
           </div>
+
+          <article class="accordion_container accordion_header_hidden">
+            <div class="accordion_header_container">
+              <h4 class="accordion_title">Can I schedule future transfers?</h4>
+
+              <div class="accordion_circle accordion_circle_open">
+                <img src="assets/arr_up.png" alt="Arrow up" />
+              </div>
+            </div>
+
+            <div class="accordion_content">
+              <p>
+                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper.
+                Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus
+                adipiscing gravida et consequat lobortis arcu velit. Nibh
+                pharetra fermentum duis accumsan lectus non. Massa cursus
+                molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus
+                gravida adipiscing euismod montes, duis egestas. Vehicula eu
+                etiam quam tristique tincidunt suspendisse ut consequat.
+              </p>
+            </div>
+          </article>
 
           <div class="accordion_header_container">
             <h4 class="accordion_title">
               When can I use Banking App services?
             </h4>
-            <div class="accordion_circle_closed">
+            <div class="accordion_circle accordion_circle_closed">
               <img src="assets/arr_down.png" alt="Arrow down" />
             </div>
           </div>
@@ -235,7 +269,7 @@
             <h4 class="accordion_title">
               Can I create my own password that is easy for me to remember?
             </h4>
-            <div class="accordion_circle_closed">
+            <div class="accordion_circle accordion_circle_closed">
               <img src="assets/arr_down.png" alt="Arrow down" />
             </div>
           </div>
@@ -244,7 +278,7 @@
             <h4 class="accordion_title">
               What happens if I forget or lose my password?
             </h4>
-            <div class="accordion_circle_closed">
+            <div class="accordion_circle accordion_circle_closed">
               <img src="assets/arr_down.png" alt="Arrow down" />
             </div>
           </div>
@@ -254,6 +288,23 @@
       <div class="contat_us_now_container">
         <p>Contact us now</p>
       </div>
+
+      <section class="contact_section_tablet">
+        <article class="contact_card">
+          <img src="assets/phone.png" alt="" class="contact_icon" />
+
+          <p>Still have questions?</p>
+
+          <button class="contact_cta">Contact us &#8594;</button>
+        </article>
+
+        <article class="contact_card">
+          <img src="assets/message.png" alt="" class="contact_icon" />
+          <p>Don't like phone calls?</p>
+
+          <button class="contact_cta cta_message">Contact us &#8594;</button>
+        </article>
+      </section>
 
       <section class="subscrice_container">
         <div class="subscribe_upper_content">
@@ -266,7 +317,7 @@
 
         <div class="subscribe_lower_content">
           <form action="submit">
-            <input type="text" />
+            <input placeholder=" &#9993; Your Email" type="email" />
           </form>
           <button>Subscribe</button>
         </div>

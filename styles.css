@@ -277,7 +277,7 @@ h1 {
   padding: 19px 0 54px 0;
 }
 
-.accordion_container {
+.accordion_list_container {
   border: 1px solid #e2e5f1;
   border-radius: 10px;
   padding: 5px 0;
@@ -294,6 +294,14 @@ h1 {
   border: none;
 }
 
+.accordion_header_hidden {
+  display: none;
+}
+
+.accordion_container_hidden {
+  display: block;
+}
+
 .accordion_title {
   font-size: 16px;
   font-weight: 600;
@@ -302,15 +310,18 @@ h1 {
   margin-right: 10px;
 }
 
-.accordion_circle_open,
-.accordion_circle_closed {
+.accordion_circle {
   width: 36px;
   height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #6366f1;
+  /* background-color: #6366f1; */
   border-radius: 50%;
+}
+
+.accordion_circle_open {
+  background-color: #6366f1;
 }
 
 .accordion_circle_closed {
@@ -341,6 +352,10 @@ h1 {
   color: white;
   font-weight: 400;
   font-size: 14px;
+}
+
+.contact_section_tablet {
+  display: none;
 }
 
 .subscrice_container {
@@ -507,5 +522,127 @@ footer p {
   .how_does_it_work_description {
     margin: 1rem 6.6rem;
     /* align-self: center; */
+  }
+
+  .faq_title {
+    width: 20rem;
+    line-height: 2.5rem;
+    align-self: center;
+  }
+
+  .accordion_list_container {
+    border: none;
+  }
+
+  .accordion_container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px lightgray;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .accordion_header_container:not(:first-child) {
+    /* background-color: green; */
+    border: none;
+    margin-top: 1rem;
+    box-shadow: 1px 2px 5px lightgray;
+    border-radius: 8px;
+  }
+
+  .accordion_header_container {
+    border: none;
+    padding: 20px;
+  }
+
+  .accordion_header_hidden {
+    display: flex;
+  }
+
+  .accordion_content {
+    border: none;
+  }
+
+  .accordion_container_hidden {
+    display: none;
+  }
+
+  .accordion_content_hidden {
+    display: none;
+  }
+
+  .accordion_tablet_3rd {
+    display: none;
+  }
+
+  .contat_us_now_container {
+    display: none;
+  }
+
+  .contact_section_tablet {
+    display: flex;
+    width: 100%;
+    padding: 1.25em;
+    gap: 2em;
+    /* justify-content: center; */
+  }
+
+  .contact_card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 0.5px solid #e2e5f1;
+    padding: 30px;
+    border-radius: 8px;
+    gap: 20px;
+    /* max-width: 45em; */
+  }
+
+  .contact_icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .contact_cta {
+    border: none;
+    background-color: transparent;
+    text-align: start;
+    color: #6366f1;
+    font-weight: 700;
+  }
+
+  .cta_message {
+    color: #22c55e;
+  }
+
+  .subscrice_container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    padding: 40px 25px;
+  }
+
+  .subscribe_upper_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+
+  .subscribe_lower_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: auto;
+    margin: 0px 0;
+    flex-grow: 1;
+  }
+
+  input {
+    padding: 0 10px;
   }
 }
