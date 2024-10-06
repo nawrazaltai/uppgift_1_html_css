@@ -10,11 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Silicon</title>
   </head>
   <body>
+
     <header>
-      <img src="assets/Link.png" alt="Silicon Logo" />
+
+      <div class="header_left_content">
+        <img src="assets/Link.png" alt="Silicon Logo" />
+        <a href="/">Features</a class="features_link">
+        </div>
+
       <div class="header_right_content">
         <div class="theme_content_container">
           <p class="dark_mode_title">Dark mode</p>
@@ -29,15 +35,21 @@
           <span class="ham_2"></span>
           <span class="ham_3"></span>
         </nav>
+
+        <button class="sign_in_btn">
+          Sign in
+        </button>
+
       </div>
     </header>
 
     <main>
       <section class="hero_section">
-        <h1>Manage All Your Money in One App</h1>
-
+        <h1 class="hero_title_large">Manage All Your <br/> Money in One App</h1>
+        
         <div class="hero_content">
           <div class="hero_left_content">
+            <h1 class="hero_title_small">Manage All Your <br/> Money in One App</h1>
             <p class="hero_description">
               We offer you a new generation of the mobile banking. Save, spend &
               manage money in your pocket.
@@ -65,46 +77,59 @@
         </div>
       </section>
 
-      <section class="brands_container"></section>
+      <section class="brands_container">
+        <article class="brand_container brand_1"></article>
+        <article class="brand_container brand_2"></article>
+        <article class="brand_container brand_3"></article>
+        <article class="brand_container brand_4"></article>
+        <article class="brand_container brand_5"></article>
+        <article class="brand_container brand_6"></article>
+      </section>
 
       <section class="features_container">
-        <h2 class="features_title">App Features</h2>
-        <p class="features_description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-          volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque
-          volutpat ligula est. Mattis fermentum, at nec lacus.
-        </p>
 
-        <div class="features_list_container">
-          <article class="feature_article">
-            <div class="feature_icon_container">
-              <img src="assets/payments.svg.png" alt="Payments logo" />
-            </div>
+        <div class="features_left_content">
+          <img src="assets/phone_card_left.png" alt="Phone with card" class="test_img">
+        </div>
 
-            <div class="feature_title_descripion_container">
-              <h3 class="feature_title">Easy Payments</h3>
-              <p class="feature_description">
-                Id mollis consectetur congue egestas egestas suspendisse blandit
-                justo.
+        <div class="features_right_content">
+          <h2 class="features_title">App Features</h2>
+          <p class="features_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque
+            volutpat ligula est. Mattis fermentum, at nec lacus.
+          </p>
+          
+          <div class="features_list_container">
+            <article class="feature_article">
+              <div class="feature_icon_container">
+                <img src="assets/payments.svg.png" class="feature_icon" alt="Payments logo" />
+              </div>
+              
+              <div class="feature_title_descripion_container">
+                <h3 class="feature_title">Easy Payments</h3>
+                <p class="feature_description">
+                  Id mollis consectetur congue egestas egestas suspendisse blandit
+                  justo.
+                </p>
+              </div>
+            </article>
+            <article class="feature_article">
+              <div class="feature_icon_container">
+                <img src="assets/security.svg.png" class="feature_icon" alt="Security logo" />
+              </div>
+              
+              <div class="feature_title_descripion_container">
+                <h3 class="feature_title">Data Security</h3>
+                <p class="feature_description">
+                  Augue pulvinar justo, fermentum fames aliquam accumsan
+                  vestibulum non.
               </p>
             </div>
           </article>
           <article class="feature_article">
             <div class="feature_icon_container">
-              <img src="assets/security.svg.png" alt="Security logo" />
-            </div>
-
-            <div class="feature_title_descripion_container">
-              <h3 class="feature_title">Data Security</h3>
-              <p class="feature_description">
-                Augue pulvinar justo, fermentum fames aliquam accumsan
-                vestibulum non.
-              </p>
-            </div>
-          </article>
-          <article class="feature_article">
-            <div class="feature_icon_container">
-              <img src="assets/statistics.svg.png" alt="Statistics logo" />
+              <img src="assets/statistics.svg.png" class="feature_icon" alt="Statistics logo" />
             </div>
 
             <div class="feature_title_descripion_container">
@@ -117,9 +142,9 @@
           </article>
           <article class="feature_article">
             <div class="feature_icon_container">
-              <img src="assets/support.svg.png" alt="Support logo" />
+              <img src="assets/support.svg.png" class="feature_icon" alt="Support logo" />
             </div>
-
+            
             <div class="feature_title_descripion_container">
               <h3 class="feature_title">Support 24/7</h3>
               <p class="feature_description">
@@ -130,9 +155,9 @@
           </article>
           <article class="feature_article">
             <div class="feature_icon_container">
-              <img src="assets/cashback.svg.png" alt="Cashback logo" />
+              <img src="assets/cashback.svg.png" class="feature_icon" alt="Cashback logo" />
             </div>
-
+            
             <div class="feature_title_descripion_container">
               <h3 class="feature_title">Regular Cashback</h3>
               <p class="feature_description">
@@ -143,9 +168,9 @@
           </article>
           <article class="feature_article">
             <div class="feature_icon_container">
-              <img src="assets/happy.svg.png" alt="Happy smiley logo" />
+              <img src="assets/happy.svg.png" class="feature_icon" alt="Happy smiley logo" />
             </div>
-
+            
             <div class="feature_title_descripion_container">
               <h3 class="feature_title">Top Standards</h3>
               <p class="feature_description">
@@ -155,11 +180,12 @@
             </div>
           </article>
         </div>
+      </div>
       </section>
-
-      <section class="how_does_it_work_container">
+      
+      <section class="how_does_it_work_container_small">
         <h2 class="how_does_it_work_title">How does it work?</h2>
-
+        
         <div class="phone_img_container"></div>
 
         <h3 class="how_does_it_work_subtitle">
@@ -170,6 +196,68 @@
           Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.
         </p>
       </section>
+
+      <section class="how_does_it_work_container_large">
+        <h2 class="how_does_it_work_title">How does it work?</h2>
+        
+        <div class="phone_img_container_2"></div>
+
+        <h3 class="how_does_it_work_subtitle">
+          Latest transaction history        </h3>
+        <p class="how_does_it_work_description">
+          Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. 
+        </p>
+      </section>
+
+      <section class="bank_benefits_container">
+
+        <div class="benefits_upper_container">
+          
+          <div class="benefits_left_content">
+            <h3 class="benefits_title">Make your money <br/> transfer simple and clear</h3>
+            <ul class="benefits_ul">
+              <li class="benefit" > <img src="assets/check-circle.png" alt="Checkmark logo"> Banking transactions are free for you</li>
+              <li class="benefit"> <img src="assets/check-circle.png" alt="Checkmark logo"> No monthly cash commission</li>
+              <li class="benefit"> <img src="assets/check-circle.png" alt="Checkmark logo"> Manage payments and transactions online</li>
+            </ul>
+            <button class="learn_more_btn">Learn more &#8594;</button>
+          </div>
+
+          <div>
+            <img src="assets/simplermoney.png" alt="Payments graph">
+          </div>
+        </div>
+
+        
+        <div class="benefits_lower_container">
+
+          <div>
+            <img src="assets/internationalbankdetails.png" alt="Phone contacts with card">
+          </div>
+
+          <div class="benefits_right_content">
+            <h3 class="benefits_title">Receive payment from <br/> international bank details</h3>
+            
+            <div class="benefits_inter_container">
+              <article >
+                <div class="benefit_icon_container">
+                <img src="assets/payments.svg.png" alt="Payment logo">
+              </div>
+                <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
+              </article>
+
+              <article>
+                <div
+                class="benefit_icon_container"
+                ><img src="assets/cashback.svg.png" alt="Cashback logo"></div>
+                <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
+              </article>
+            </div>
+            <button class="learn_more_btn">Learn more &#8594;</button>
+          </div>
+        </div>
+      </section>
+
 
       <section class="faq_container">
         <h2 class="faq_title">Any questions? Check out the FAQs</h2>
@@ -285,13 +373,212 @@
         </section>
       </section>
 
+
+      <section class="clients_container">
+        
+        <div class="clients_left_content">
+          <h3 class="clients_title">
+            Clients are <br/> Loving Our App 
+          </h3>
+        </div>
+        
+        <div class="clients_right_content">
+        <article class="client_container">
+          <div class="quotes">
+          <span class="quote">
+            &#8220
+          </span>
+          </div>
+          <p style="color: gold; padding: .75em 0; font-size: 1.25rem;">&#9733;&#9733;&#9733;&#9733;<span style="color: gray;">&#9734;</span></p>
+          <p class="client_message">Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
+          
+          <div class="client_info_container">
+            <div class="client_pic_container"><img src="assets/girl.png" alt="Client memoji"></div>
+            <div class="client_name_occupation_container">
+              <p class="name">Fannie Summers</p>
+              <p class="occupation">Designer</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="client_container">
+          <div class="quotes">
+          <span class="quote">
+            &#8220
+          </span>
+          </div>
+          <p style="color: gold; padding: .75em 0; font-size: 1.25rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="client_message">Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
+          
+          <div class="client_info_container">
+            <div class="client_pic_container"><img src="assets/boy.png" alt="Client memoji"></div>
+            <div class="client_name_occupation_container">
+              <p class="name">Albert Flores</p>
+              <p class="occupation">Developer</p>
+            </div>
+          </div>
+        </article>
+      </div>
+        
+      </section>
+
+
+
+
+
+
+
+
+      <section class="faq_container_large">
+        
+        <div class="faq_left_content">
+          <h2 class="faq_title">Any questions? Check out the FAQs</h2>
+          <p class="faq_description">
+            Still have unanswered questions and need to get in touch?
+          </p>
+
+          <section class="contact_section_large">
+            <article class="contact_card">
+              <img src="assets/phone.png" alt="Phone logo" class="contact_icon" />
+    
+              <p class="contact_p">Still have questions?</p>
+    
+              <button class="contact_cta">Contact us &#8594;</button>
+            </article>
+    
+            <article class="contact_card">
+              <img src="assets/message.png" alt="Message logo" class="contact_icon" />
+              <p class="contact_p">Don't like phone calls?</p>
+    
+              <button class="contact_cta cta_message">Contact us &#8594;</button>
+            </article>
+          </section>
+        
+        </div>
+
+        
+
+        <div class="faq_content_large">
+
+        <div class="accordion_header_container accordion_header_hidden first_faq_large">
+          <h4 class="accordion_title">
+            Is any of my personal information stored in the App?
+          </h4>
+          <div class="accordion_circle accordion_circle_closed">
+            <img src="assets/arr_down.png" alt="Arrow down" />
+          </div>
+
+        </div>
+
+        <section class="accordion_list_container">
+          <article class="accordion_container accordion_container_hidden ">
+            <div class="accordion_header_container">
+              <h4 class="accordion_title">
+                Is any of my personal information stored in the App?
+              </h4>
+
+              <div class="accordion_circle accordion_circle_open">
+                <img src="assets/arr_up.png" alt="Arrow up" />
+              </div>
+            </div>
+
+            <div class="accordion_content accordion_content_hidden">
+              <p>
+                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper.
+                Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus
+                adipiscing gravida et consequat lobortis arcu velit. Nibh
+                pharetra fermentum duis accumsan lectus non. Massa cursus
+                molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus
+                gravida adipiscing euismod montes, duis egestas. Vehicula eu
+                etiam quam tristique tincidunt suspendisse ut consequat.
+                <br />
+                <br />
+                Ornare senectus fusce dignissim ut. Integer consequat in eu
+                tortor, faucibus et lacinia posuere. Turpis sit viverra lorem
+                suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam
+                nunc purus lacus, elit leo elit facilisi. Dignissim amet
+                adipiscing massa integer.
+              </p>
+            </div>
+          </article>
+
+          <div class="accordion_header_container">
+            <h4 class="accordion_title">
+              What formats can I download my transaction history in?
+            </h4>
+            <div class="accordion_circle accordion_circle_closed">
+              <img src="assets/arr_down.png" alt="Arrow down" />
+            </div>
+          </div>
+
+          <div class="accordion_header_container accordion_tablet_3rd">
+            <h4 class="accordion_title">Can I schedule future transfers?</h4>
+            <div class="accordion_circle accordion_circle_closed">
+              <img src="assets/arr_down.png" alt="Arrow down" />
+            </div>
+          </div>
+
+          <article class="accordion_container accordion_header_hidden">
+            <div class="accordion_header_container">
+              <h4 class="accordion_title">Can I schedule future transfers?</h4>
+
+              <div class="accordion_circle accordion_circle_open">
+                <img src="assets/arr_up.png" alt="Arrow up" />
+              </div>
+            </div>
+
+            <div class="accordion_content">
+              <p>
+                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper.
+                Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus
+                adipiscing gravida et consequat lobortis arcu velit. Nibh
+                pharetra fermentum duis accumsan lectus non. Massa cursus
+                molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus
+                gravida adipiscing euismod montes, duis egestas. Vehicula eu
+                etiam quam tristique tincidunt suspendisse ut consequat.
+              </p>
+            </div>
+          </article>
+
+          <div class="accordion_header_container">
+            <h4 class="accordion_title">
+              When can I use Banking App services?
+            </h4>
+            <div class="accordion_circle accordion_circle_closed">
+              <img src="assets/arr_down.png" alt="Arrow down" />
+            </div>
+          </div>
+
+          <div class="accordion_header_container">
+            <h4 class="accordion_title">
+              Can I create my own password that is easy for me to remember?
+            </h4>
+            <div class="accordion_circle accordion_circle_closed">
+              <img src="assets/arr_down.png" alt="Arrow down" />
+            </div>
+          </div>
+
+          <div class="accordion_header_container">
+            <h4 class="accordion_title">
+              What happens if I forget or lose my password?
+            </h4>
+            <div class="accordion_circle accordion_circle_closed">
+              <img src="assets/arr_down.png" alt="Arrow down" />
+            </div>
+          </div>
+        </section>
+        
+      </div>
+      </section>
+
+
       <div class="contat_us_now_container">
         <p>Contact us now</p>
       </div>
 
       <section class="contact_section_tablet">
         <article class="contact_card">
-          <img src="assets/phone.png" alt="" class="contact_icon" />
+          <img src="assets/phone.png" alt="Phone logo" class="contact_icon" />
 
           <p>Still have questions?</p>
 
@@ -299,20 +586,22 @@
         </article>
 
         <article class="contact_card">
-          <img src="assets/message.png" alt="" class="contact_icon" />
+          <img src="assets/message.png" alt="Message logo" class="contact_icon" />
           <p>Don't like phone calls?</p>
 
           <button class="contact_cta cta_message">Contact us &#8594;</button>
         </article>
       </section>
 
-      <section class="subscrice_container">
+
+      <section class="subscribe_container">
         <div class="subscribe_upper_content">
           <img
             src="assets/notification-icon-1.svg.png"
             alt="Notifications logo"
           />
           <h3 class="subscribe_title">Subscribe to our newsletter</h3>
+          <h3 class="subscribe_title_large">Subscribe to our newsletter to <br/> stay informed about latest updates</h3>
         </div>
 
         <div class="subscribe_lower_content">
