@@ -6,16 +6,47 @@
   transition: all ease-in-out 500ms;
 }
 
+:root {
+  --background-color: white;
+  --background-color-secondary: #f3f6ff;
+  --text-color: black;
+  --accent-bg: #6366f1;
+  --switch-bg: #9397ad;
+}
+
+[data-theme="dark"] {
+  --background-color: #1b1f29;
+  --background-color-secondary: #0b0f19;
+  --text-color: white;
+  --switch-bg: #6366f1;
+
+  .switch_inner_circle {
+    left: 25px;
+  }
+
+  .ham_1,
+  .ham_2,
+  .ham_3 {
+    background-color: white;
+  }
+}
+
 header {
   padding: 1em 1em;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  margin: 0;
+  background-color: var(--background-color);
 }
 
 header a {
   display: none;
+}
+
+.features_link {
+  color: var(--text-color);
 }
 
 .header_right_content {
@@ -29,7 +60,7 @@ header a {
 }
 
 .switch_bg {
-  background-color: #9397ad;
+  background-color: var(--switch-bg);
   width: 46px;
   height: 24px;
   margin-left: auto;
@@ -37,14 +68,17 @@ header a {
   display: flex;
   align-items: center;
   margin-right: 0.75rem;
+  position: relative;
+  cursor: pointer;
 }
 
 .switch_inner_circle {
+  position: absolute;
   height: 18px;
   width: 18px;
   border-radius: 50%;
   background-color: white;
-  margin: 0 2.5px;
+  left: 3px;
 }
 
 .dark_mode_title {
@@ -467,10 +501,16 @@ footer p {
     gap: 10px;
   }
 
+  .theme_content_container:hover {
+    cursor: pointer;
+  }
+
   .dark_mode_title {
     display: block;
     font-weight: bold;
     font-size: 16px;
+    color: var(--text-color);
+    text-transform: capitalize;
   }
 
   .hero_title_large {
