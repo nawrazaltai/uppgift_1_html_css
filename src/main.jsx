@@ -5,9 +5,7 @@ import { Header } from "./components/Header/Header";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <header>
-      <Header />
-    </header>
+    <Header />
     <App />
   </React.StrictMode>
 );

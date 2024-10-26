@@ -9,16 +9,33 @@
 :root {
   --background-color: white;
   --background-color-secondary: #f3f6ff;
+  --hero-description-color: #585c7b;
   --text-color: black;
   --accent-bg: #6366f1;
   --switch-bg: #9397ad;
+  --hero-bg: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(243, 240, 254, 1) 50%,
+    rgba(252, 245, 254, 1) 100%
+  );
+  --cta-bg: #0b0f19;
 }
 
 [data-theme="dark"] {
-  --background-color: #1b1f29;
-  --background-color-secondary: #0b0f19;
+  --background-color: #0b0f19;
+  --background-color-secondary: #1b1f19;
+  --hero-description-color: white;
   --text-color: white;
   --switch-bg: #6366f1;
+  --hero-bg: linear-gradient(
+    180deg,
+    rgba(11, 15, 25, 1) 0%,
+    rgba(18, 16, 31, 1) 50%,
+    rgba(22, 20, 40, 1) 100%
+  );
+
+  --cta-bg: white;
 
   .switch_inner_circle {
     left: 25px;
@@ -28,6 +45,21 @@
   .ham_2,
   .ham_3 {
     background-color: white;
+  }
+
+  .ios_cta {
+    background-image: url("assets/appstore-dark.svg.png");
+  }
+
+  .android_cta {
+    background-image: url("assets/googleplay-dark.svg\ fill.png");
+  }
+
+  .arrow_down_dark {
+    display: none;
+  }
+  .arrow_down_light {
+    display: flex;
   }
 }
 
@@ -111,12 +143,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(243, 240, 254, 1) 50%,
-    rgba(252, 245, 254, 1) 100%
-  );
+  background: var(--hero-bg);
 }
 
 .hero_content {
@@ -133,6 +160,7 @@ nav {
   text-align: center;
   line-height: 44.4px;
   padding: 0 1em;
+  color: var(--text-color);
 }
 
 .hero_title_large {
@@ -140,7 +168,7 @@ nav {
 }
 
 .hero_description {
-  color: #585c7b;
+  color: var(--hero-description-color);
   font-size: 18px;
   padding: 1rem 1rem;
   text-align: center;
@@ -164,7 +192,8 @@ nav {
 .ios_cta,
 .android_cta {
   display: flex;
-  background-color: #131022;
+  /* background-color: #131022; */
+  background-color: var(--cta-bg);
   border: none;
   border-radius: 8px;
   width: 100%;
@@ -199,11 +228,21 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: white;
+  background-color: var(--background-color);
   border: none;
 }
 
+.arrow_down_light {
+  display: none;
+}
+
+.arrow_down_dark {
+  display: flex;
+}
+
 .discover_more_text {
-  color: #585c7b;
+  color: var(--hero-description-color);
+  opacity: 75%;
 }
 
 .brands_container {
