@@ -1,4 +1,51 @@
+import FeatureCard from "./FeatureCard";
+
 const Features = () => {
+  const featuresList = [
+    {
+      id: 0,
+      title: "Easy Payments",
+      description:
+        "Id mollis consectetur congue egestas egestas suspendisse blandit justo.",
+      icon_src: "assets/payments.svg.png",
+    },
+    {
+      id: 1,
+      title: "Data Security",
+      description:
+        "Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.",
+      icon_src: "assets/security.svg.png",
+    },
+    {
+      id: 2,
+      title: "Cost Statistics",
+      description:
+        "Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.",
+      icon_src: "assets/statistics.svg.png",
+    },
+    {
+      id: 3,
+      title: "Support 24/7",
+      description:
+        "A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.",
+      icon_src: "assets/support.svg.png",
+    },
+    {
+      id: 4,
+      title: "Regular Cashback",
+      description:
+        "Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.",
+      icon_src: "assets/cashback.svg.png",
+    },
+    {
+      id: 5,
+      title: "Top Standards",
+      description:
+        "Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.",
+      icon_src: "assets/happy.svg.png",
+    },
+  ];
+
   return (
     <section className="features_container">
       <div className="features_left_content">
@@ -18,108 +65,16 @@ const Features = () => {
         </p>
 
         <div className="features_list_container">
-          <article className="feature_article">
-            <div className="feature_icon_container">
-              <img
-                src="assets/payments.svg.png"
-                className="feature_icon"
-                alt="Payments logo"
+          {featuresList.map((f) => {
+            return (
+              <FeatureCard
+                key={f.id}
+                title={f.title}
+                description={f.description}
+                icon_src={f.icon_src}
               />
-            </div>
-
-            <div className="feature_title_descripion_container">
-              <h3 className="feature_title">Easy Payments</h3>
-              <p className="feature_description">
-                Id mollis consectetur congue egestas egestas suspendisse blandit
-                justo.
-              </p>
-            </div>
-          </article>
-          <article className="feature_article">
-            <div className="feature_icon_container">
-              <img
-                src="assets/security.svg.png"
-                className="feature_icon"
-                alt="Security logo"
-              />
-            </div>
-
-            <div className="feature_title_descripion_container">
-              <h3 className="feature_title">Data Security</h3>
-              <p className="feature_description">
-                Augue pulvinar justo, fermentum fames aliquam accumsan
-                vestibulum non.
-              </p>
-            </div>
-          </article>
-          <article className="feature_article">
-            <div className="feature_icon_container">
-              <img
-                src="assets/statistics.svg.png"
-                className="feature_icon"
-                alt="Statistics logo"
-              />
-            </div>
-
-            <div className="feature_title_descripion_container">
-              <h3 className="feature_title">Cost Statistics</h3>
-              <p className="feature_description">
-                Mattis urna ultricies non amet, purus in auctor non. Odio
-                vulputate ac nibh.
-              </p>
-            </div>
-          </article>
-          <article className="feature_article">
-            <div className="feature_icon_container">
-              <img
-                src="assets/support.svg.png"
-                className="feature_icon"
-                alt="Support logo"
-              />
-            </div>
-
-            <div className="feature_title_descripion_container">
-              <h3 className="feature_title">Support 24/7</h3>
-              <p className="feature_description">
-                A elementum, imperdiet enim, pretium etiam facilisi in aenean
-                quam mauris.
-              </p>
-            </div>
-          </article>
-          <article className="feature_article">
-            <div className="feature_icon_container">
-              <img
-                src="assets/cashback.svg.png"
-                className="feature_icon"
-                alt="Cashback logo"
-              />
-            </div>
-
-            <div className="feature_title_descripion_container">
-              <h3 className="feature_title">Regular Cashback</h3>
-              <p className="feature_description">
-                Sit facilisis dolor arcu, fermentum vestibulum arcu elementum
-                imperdiet eleifend.
-              </p>
-            </div>
-          </article>
-          <article className="feature_article">
-            <div className="feature_icon_container">
-              <img
-                src="assets/happy.svg.png"
-                className="feature_icon"
-                alt="Happy smiley logo"
-              />
-            </div>
-
-            <div className="feature_title_descripion_container">
-              <h3 className="feature_title">Top Standards</h3>
-              <p className="feature_description">
-                Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id.
-                Sit facilisis dolor arcu.
-              </p>
-            </div>
-          </article>
+            );
+          })}
         </div>
       </div>
     </section>
