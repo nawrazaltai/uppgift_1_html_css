@@ -4,6 +4,7 @@ import Brands from "./components/Brands/Brands";
 import HowDoesItWork from "./components/HowItWorks/HowDoesItWork";
 import BankBenefits from "./components/Benefits/BankBenefits";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Faq from "./components/FAQ/Faq";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <HowDoesItWork />
       <BankBenefits />
       <Testimonials />
+      <Faq />
     </main>
   );
 };

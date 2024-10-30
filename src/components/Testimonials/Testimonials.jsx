@@ -9,8 +9,6 @@ const Testimonials = () => {
     loading,
   } = useFetch("https://win24-assignment.azurewebsites.net/api/testimonials");
 
-  console.log(testimonials);
-
   return (
     <section className="clients_container">
       <div className="clients_left_content">
