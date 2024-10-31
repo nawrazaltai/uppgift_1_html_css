@@ -34,6 +34,22 @@ const Faq = () => {
         <Accordion />
         <FAQContact />
       </section>
+
+      <section className="faq_container_large">
+        <div className="faq_left_container">
+          <h2 className="faq_title">
+            Any questions? <br /> Check out the FAQs
+          </h2>
+          <p className="faq_description">
+            Still have unanswered questions and need to get in touch?
+          </p>
+          <FAQContact />
+        </div>
+
+        <div className="faq_right_container">
+          <Accordion />
+        </div>
+      </section>
     </>
   );
 };

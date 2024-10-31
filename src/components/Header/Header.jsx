@@ -17,9 +17,14 @@ export const Header = () => {
       <div className="header_left_content">
         <img src="assets/Link.png" alt="Silicon Logo" />
 
-        <a href="/" className="features_link">
-          Features
-        </a>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <a href="/" className="features_link">
+            Features
+          </a>
+          <a href="/contact" className="features_link">
+            Contact
+          </a>
+        </div>
       </div>
 
       <div className="header_right_content">

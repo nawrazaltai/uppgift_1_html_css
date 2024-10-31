@@ -16,18 +16,24 @@ const FAQContact = () => {
   const contactMethods = [
     { id: "phone", icon: "/assets/phone.png", title: "Still have questions?" },
     {
-      id: "phone",
+      id: "message",
       icon: "/assets/message.png",
       title: "Don't like phone calls?",
     },
   ];
 
   return (
-    <div className="faq_contact_container">
-      {contactMethods.map((i) => {
-        return <ContactCard item={i} />;
-      })}
-    </div>
+    <>
+      <div className="faq_contact_us_now_container">
+        <button className="contact_us_now_button">Contact us now</button>
+      </div>
+
+      <div className="faq_contact_container">
+        {contactMethods.map((i) => {
+          return <ContactCard key={i.id} item={i} />;
+        })}
+      </div>
+    </>
   );
 };
 
