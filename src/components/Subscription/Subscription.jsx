@@ -4,11 +4,14 @@ import { useState } from "react";
 
 const Subscription = () => {
   const [submitted, setSubmitted] = useState(false);
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
 
+  console.log(BASE_URL);
   const {
     register,
     handleSubmit,
     setError,
+    reset,
     watch,
     formState: { errors },
   } = useForm({
@@ -18,19 +21,16 @@ const Subscription = () => {
   });
 
   const onSubscribe = async (data) => {
-    const response = await fetch(
-      "https://win24-assignment.azurewebsites.net/api/forms/subscribe",
-      {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials": true,
-        },
-        body: JSON.stringify(data),
-      }
-    );
+    const response = await fetch(`${BASE_URL}/api/forms/subscribe`, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
+      body: JSON.stringify(data),
+    });
 
     // const result = await response.json();
     if (!response.ok) {
@@ -40,6 +40,7 @@ const Subscription = () => {
       });
     } else {
       setSubmitted(true);
+      reset();
     }
   };
 

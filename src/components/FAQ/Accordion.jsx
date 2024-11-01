@@ -3,9 +3,9 @@ import useFetch from "../../hooks/useFetch";
 import { useState, useEffect } from "react";
 
 const Accordion = () => {
-  const { data, error, loading } = useFetch(
-    "https://win24-assignment.azurewebsites.net/api/faq"
-  );
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
+
+  const { data, error, loading } = useFetch(`${BASE_URL}/api/faq`);
 
   const [faqList, setFaqList] = useState(null);
   useEffect(() => {

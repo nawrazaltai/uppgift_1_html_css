@@ -585,6 +585,7 @@ form {
   color: white;
   margin: 0;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .subscription_success_container {
@@ -992,6 +993,7 @@ footer p {
     border-radius: 4px;
     font-size: 1rem;
     color: white;
+    cursor: pointer;
   }
 
   .sign_in_btn:hover {

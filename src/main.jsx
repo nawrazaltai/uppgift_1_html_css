@@ -5,6 +5,7 @@ import { Header } from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Contact from "./Contact";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -13,9 +14,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Header />
-    {/* <App /> */}
-    <RouterProvider router={router} />
-    <Footer />
+    <ThemeProvider>
+      <Header />
+      {/* <App /> */}
+      <RouterProvider router={router} />
+      <Footer />
+    </ThemeProvider>
   </React.StrictMode>
 );

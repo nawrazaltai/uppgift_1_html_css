@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { useTheme } from "../../context/ThemeContext";
 
 export const Header = () => {
-  const [theme, setTheme] = useState("light");
+  //   const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
+  //   useEffect(() => {
+  //     document.documentElement.setAttribute("data-theme", theme);
+  //   }, [theme]);
 
-  const toggleTheme = () => {
-    const newTheme = theme == "light" ? "dark" : "light";
-    setTheme(newTheme);
-  };
+  //   const toggleTheme = () => {
+  //     const newTheme = theme == "light" ? "dark" : "light";
+  //     setTheme(newTheme);
+  //   };
+
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header>

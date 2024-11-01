@@ -3,11 +3,13 @@ import useFetch from "../../hooks/useFetch";
 import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
+
   const {
     data: testimonials,
     error,
     loading,
-  } = useFetch("https://win24-assignment.azurewebsites.net/api/testimonials");
+  } = useFetch(`${BASE_URL}/api/testimonials`);
 
   return (
     <section className="clients_container">
