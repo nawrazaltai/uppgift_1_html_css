@@ -45,7 +45,7 @@ main {
   --description-color: rgba(255, 255, 255, 0.658);
 
   .switch_inner_circle {
-    left: 25px;
+    left: 26px;
   }
 
   .ham_1,
@@ -127,8 +127,8 @@ header a {
 
 .switch_inner_circle {
   position: absolute;
-  height: 18px;
-  width: 18px;
+  height: 1rem;
+  width: 1rem;
   border-radius: 50%;
   background-color: white;
   left: 3px;
@@ -651,6 +651,88 @@ footer p {
 .subscription_button_error_container {
   display: flex;
   flex-direction: column;
+}
+
+.contact_container {
+  min-height: 100vh;
+  padding: 0 1.25em;
+  background-color: var(--background-color);
+}
+
+.contact_upper_section {
+  background-color: var(--background-color);
+  display: flex;
+  padding-top: 1em;
+  /* justify-content: center; */
+}
+
+.contact_page_title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.contact_articles_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding-top: 2em;
+}
+
+.contact_article {
+  display: flex;
+  gap: 1.25em;
+  align-items: start;
+}
+
+.contact_article_icon_container {
+  background-color: var(--background-color-secondary);
+  height: 3em;
+  min-width: 3em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_article_icon {
+  width: 50%;
+}
+
+.contact_article_right {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact_article_title {
+  color: var(--text-color);
+  font-weight: bolder;
+  font-size: 1.25rem;
+}
+
+.contact_article_description {
+  color: #585c7b;
+  font-size: 0.9rem;
+  max-width: 90%;
+}
+
+.contact_article_button {
+  color: var(--accent-bg);
+  font-weight: 500;
+  text-align: start;
+  border: none;
+  background-color: transparent;
+
+  &::after {
+    content: " →";
+  }
+
+  &:hover {
+    color: orange;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 768px) {

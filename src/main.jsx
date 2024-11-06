@@ -4,21 +4,26 @@ import App from "./App";
 import { Header } from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Contact from "./Contact";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 
-const router = createBrowserRouter([
-  { path: "/", element: <App /> },
-  { path: "/contact", element: <Contact /> },
-]);
-
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <Header />
-      {/* <App /> */}
-      <RouterProvider router={router} />
-      <Footer />
-    </ThemeProvider>
-  </React.StrictMode>
+  <BrowserRouter>
+    <React.StrictMode>
+      <ThemeProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </ThemeProvider>
+    </React.StrictMode>
+  </BrowserRouter>
 );

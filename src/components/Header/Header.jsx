@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "../../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
-  //   const [theme, setTheme] = useState("light");
-
-  //   useEffect(() => {
-  //     document.documentElement.setAttribute("data-theme", theme);
-  //   }, [theme]);
-
-  //   const toggleTheme = () => {
-  //     const newTheme = theme == "light" ? "dark" : "light";
-  //     setTheme(newTheme);
-  //   };
-
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -21,12 +11,12 @@ export const Header = () => {
         <img src="assets/Link.png" alt="Silicon Logo" />
 
         <div style={{ display: "flex", gap: "1rem" }}>
-          <a href="/" className="features_link">
+          <Link to="/" className="features_link">
             Features
-          </a>
-          <a href="/contact" className="features_link">
+          </Link>
+          <Link to="/contact" className="features_link">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
 
