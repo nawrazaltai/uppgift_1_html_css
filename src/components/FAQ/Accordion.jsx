@@ -2,12 +2,9 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { useState, useEffect } from "react";
 
-const Accordion = () => {
-  const BASE_URL = import.meta.env.VITE_BASE_URL;
-
-  const { data, error, loading } = useFetch(`${BASE_URL}/api/faq`);
-
+const Accordion = ({ data }) => {
   const [faqList, setFaqList] = useState(null);
+
   useEffect(() => {
     const result = data?.map((i) => Object.assign(i, { isOpen: false }));
     setFaqList(result);
@@ -29,12 +26,12 @@ const Accordion = () => {
         return (
           <div key={f.id} className="faq_card">
             <div className="faq_card_header">
-              <h4 className="faq_card_title">{f.title}</h4>
+              <h4 className="faq_card_title">{f?.title}</h4>
               <button
                 className={
-                  f.isOpen ? "faq_card_button_open" : "faq_card_button_closed"
+                  f?.isOpen ? "faq_card_button_open" : "faq_card_button_closed"
                 }
-                onClick={() => onToggle(f.id)}
+                onClick={() => onToggle(f?.id)}
               >
                 ⌵
               </button>
@@ -42,11 +39,11 @@ const Accordion = () => {
 
             <div
               className={
-                f.isOpen ? "faq_content_visible" : "faq_content_hidden"
+                f?.isOpen ? "faq_content_visible" : "faq_content_hidden"
               }
-              id={f.id}
+              id={f?.id}
             >
-              <p>{f.content}</p>
+              <p>{f?.content}</p>
             </div>
           </div>
         );

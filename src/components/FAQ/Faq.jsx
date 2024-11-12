@@ -8,22 +8,6 @@ const Faq = () => {
     "https://win24-assignment.azurewebsites.net/api/faq"
   );
 
-  const [faqList, setFaqList] = useState(null);
-  useEffect(() => {
-    const result = data?.map((i) => Object.assign(i, { isOpen: false }));
-    setFaqList(result);
-  }, [data]);
-
-  const onToggle = (id) => {
-    const result = faqList.map((f) => {
-      if (f.id == id) {
-        return { ...f, isOpen: !f.isOpen };
-      }
-      return f;
-    });
-    setFaqList(result);
-  };
-
   return (
     <>
       <section className="faq_container">
@@ -31,7 +15,7 @@ const Faq = () => {
         <p className="faq_description">
           Still have unanswered questions and need to get in touch?
         </p>
-        <Accordion />
+        <Accordion data={data} />
         <FAQContact />
       </section>
 
@@ -47,7 +31,7 @@ const Faq = () => {
         </div>
 
         <div className="faq_right_container">
-          <Accordion />
+          <Accordion data={data} />
         </div>
       </section>
     </>

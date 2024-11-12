@@ -21,16 +21,19 @@ const Subscription = () => {
   });
 
   const onSubscribe = async (data) => {
-    const response = await fetch(`${BASE_URL}/api/forms/subscribe`, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": true,
-      },
-      body: JSON.stringify(data),
-    });
+    const response = await fetch(
+      `https://win24-assignment.azurewebsites.net/api/forms/subscribe`,
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials": true,
+        },
+        body: JSON.stringify(data),
+      }
+    );
 
     // const result = await response.json();
     if (!response.ok) {

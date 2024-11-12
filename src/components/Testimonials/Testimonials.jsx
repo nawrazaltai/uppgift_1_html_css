@@ -9,7 +9,7 @@ const Testimonials = () => {
     data: testimonials,
     error,
     loading,
-  } = useFetch(`${BASE_URL}/api/testimonials`);
+  } = useFetch(`https://win24-assignment.azurewebsites.net/api/testimonials`);
 
   return (
     <section className="clients_container">
