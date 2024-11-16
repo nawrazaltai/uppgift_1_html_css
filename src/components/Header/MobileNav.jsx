@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const navLinks = [
   {
@@ -12,6 +13,8 @@ const navLinks = [
 ];
 
 const MobileNav = ({ isOpen, onOpen }) => {
+  const location = useLocation();
+
   return (
     <>
       <div
@@ -34,7 +37,12 @@ const MobileNav = ({ isOpen, onOpen }) => {
           {navLinks.map((l) => {
             return (
               <li onClick={onOpen} className="mobile_nav_link_li" key={l.title}>
-                <NavLink className="mobile_nav_link" to={l.href}>
+                <NavLink
+                  className={`mobile_nav_link ${
+                    location.pathname == l.href && "nav_link_active"
+                  }`}
+                  to={l.href}
+                >
                   {l.title}
                 </NavLink>
               </li>
