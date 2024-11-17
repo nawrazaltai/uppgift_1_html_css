@@ -1,12 +1,10 @@
 import { useForm } from "react-hook-form";
-import { json } from "react-router-dom";
 import { useState } from "react";
 
 const Subscription = () => {
   const [submitted, setSubmitted] = useState(false);
-  const BASE_URL = import.meta.env.VITE_BASE_URL;
+  // const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-  console.log(BASE_URL);
   const {
     register,
     handleSubmit,

@@ -652,31 +652,35 @@ footer p {
   flex-direction: column;
 }
 
-.contact_container {
+/* .contact_container {
   min-height: 100vh;
-  padding: 0 1.25em;
-  background-color: var(--background-color);
-}
+} */
 
 .contact_upper_section {
-  background-color: var(--background-color);
   display: flex;
-  padding-top: 1em;
-  /* justify-content: center; */
+  flex-direction: column;
+  padding: 1em 1.25em;
+  padding-bottom: 3em;
+  background-color: var(--background-color-secondary);
+}
+
+.contact_upper_left {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact_page_title {
   font-size: 2rem;
   font-weight: 900;
+  color: var(--text-color);
 }
 
 .contact_articles_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 2em;
   padding-top: 2em;
+  width: 100%;
 }
 
 .contact_article {
@@ -686,13 +690,13 @@ footer p {
 }
 
 .contact_article_icon_container {
-  background-color: var(--background-color-secondary);
   height: 3em;
   min-width: 3em;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-color);
 }
 
 .contact_article_icon {
@@ -731,6 +735,126 @@ footer p {
   &:hover {
     color: orange;
     cursor: pointer;
+  }
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  border: 1px solid rgb(228, 228, 228);
+  padding: 1.85em 1.25em;
+  gap: 1.25em;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  max-width: 35rem;
+}
+
+.contact_form_title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+.contact_field_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_field_label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding-bottom: 0.25rem;
+  color: var(--text-color);
+}
+
+.contact_input_field {
+  padding: 0.65em 0.55em;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.contact_form_button {
+  background-color: var(--accent-bg);
+  border: none;
+  padding: 0.75em;
+  border-radius: 5px;
+  color: white;
+  margin-top: 2em;
+}
+
+.contact_lower_section {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1.25em;
+  background-color: var(--background-color);
+}
+
+.contact_map_img_container {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.contact_map_img {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.locations_container {
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 2em; */
+  gap: 2em;
+  /* background-color: var(--background-color-secondary); */
+}
+
+.contact_location_article {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact_location_info_container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.contact_info_content {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.contact_location_title {
+  color: var(--text-color);
+}
+
+.contact_location_icon {
+  width: 1em;
+  height: 1em;
+}
+
+.socials_container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.social_icon_article {
+  width: 3em;
+  height: 3em;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  background-color: #eff2fc;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--accent-bg);
+    transform: rotate(-45deg) scale(1.1);
   }
 }
 
@@ -814,6 +938,7 @@ footer p {
     color: var(--accent-bg);
   }
 }
+
 .nav_link_active {
   color: orange;
   text-decoration: underline;
@@ -821,6 +946,13 @@ footer p {
     color: orange;
   }
 }
+
+.contact_success_message {
+  color: #22c55e;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
 @media only screen and (min-width: 768px) {
   .theme_content_container {
     display: flex;
@@ -1125,6 +1257,32 @@ footer p {
 
   .mobile_nav_container_open {
     width: 30%;
+  }
+
+  .contact_upper_left {
+    flex-direction: row;
+    /* justify-content: center; */
+  }
+
+  .contact_lower_section {
+    flex-direction: row;
+    /* justify-content: center; */
+    gap: 2em;
+  }
+
+  .contact_map_img_container {
+    visibility: visible;
+    width: 60%;
+    max-width: 60%;
+    height: 30em;
+    flex-grow: 1;
+  }
+
+  .contact_map_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    visibility: visible;
   }
 }
 
@@ -1558,5 +1716,20 @@ footer p {
   .mobile_nav_container_closed {
     width: 0;
     visibility: hidden;
+  }
+
+  .contact_upper_section {
+    padding: 1em 10em;
+    padding-bottom: 3em;
+  }
+
+  .contact_lower_section {
+    padding: 1em 10em;
+    gap: 4em;
+    padding-top: 5em;
+  }
+
+  .contact_page_title {
+    font-size: 2.2rem;
   }
 }
